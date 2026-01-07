@@ -20,20 +20,39 @@ h1 {
     justify-content: center;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* If flexible-box is inside another container, that container needs: */
+.parent-container {
+    width: 100%;
+    padding: 0 10px; /* Small side padding */
+    box-sizing: border-box;
+}
+
 .flexible-box {
     border: 2px solid black;
     background-color: rgb(170, 150, 211);
     border-radius: 25px;
     padding: 20px;
-    width: 100%;
+    width: calc(100% - 20px); /* Subtract margin for centering */
     max-width: 1250px;
     box-sizing: border-box;
     text-align: center;
     font-family: "Bubblegum Sans";
     font-size: 24px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 20px auto; /* Centers with auto left/right margins */
+}
+
+@media (max-width: 768px) {
+    .flexible-box {
+        padding: 15px;
+        font-size: 18px;
+        width: calc(100% - 10px); /* Less margin on mobile */
+    }
 }
 
 @media (max-width: 768px) {
