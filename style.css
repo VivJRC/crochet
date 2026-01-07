@@ -30,9 +30,26 @@ h1 {
     box-sizing: border-box;
     text-align: center;
     font-family: "Bubblegum Sans";
-    font-size: 16px;
-    margin-bottom: 20px;
     font-size: 24px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .flexible-box {
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flexible-box {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
 }
 
 rect {
