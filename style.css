@@ -117,3 +117,25 @@ nav li:hover a {
         padding-top: 80px;
     }
 }
+
+a:not(nav a) {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:not(nav a):hover {
+    text-decoration: underline;
+    color: #8c1090;
+}
+
+svg a text {
+    fill: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+svg a:hover text {
+    fill: #8c1090;
+    text-decoration: underline;
+}
